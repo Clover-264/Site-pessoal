@@ -1,0 +1,63 @@
+/*css geral do site*/
+body {
+    background-image: url("../imagens/fundo.png");
+    background-size: 1100px;
+    background-repeat: repeat;
+    color:white;
+}
+
+.segredo{
+    color: transparent;
+}
+
+/*animation para fazer o texto ficar mudando de cor*/
+.texto{
+        animation:mudarCor 3s infinite;
+    }
+
+    @keyframes mudarCor{
+        0% {color:red;}
+        5% {color:aqua;}
+        10% {color:palevioletred;}
+        15% {color:springgreen;}
+        20% {color:orangered;}
+        25% {color:brown;}
+        40% {color:yellow;}
+        60% {color:green;}
+        80% {color:blue;}
+        100% {color:purple;}
+    }
+
+.bigSpeechcolor{
+    color:red;
+}
+
+/*css para a aba de videos no index.html*/
+.videos{
+    display:flex;
+    gap:100px;
+    flex-wrap:wrap;
+}
+
+.video{
+    text-align:center;
+}
+
+/*css para o tamanho das imagens na tabela de animais favoritos na aba imagens e gifs no index.html*/
+table img {
+    width: 363px;
+}
+
+/*css para mudar a cor e tamanho das letras na imagem técnica*/
+figcaption{
+    font-size: 30px;
+    color:red;
+}
+
+footer{
+    font-size:20px;
+}
+
+.email{
+    color:red;
+}

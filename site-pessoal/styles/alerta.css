@@ -1,0 +1,14 @@
+/*css para os botões no site de alerta*/
+button{
+    font-size: 22px;
+    padding: 15px 40px;
+    border-radius: 8px;
+}
+
+.botoes{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 80px;
+    text-decoration: none;
+}

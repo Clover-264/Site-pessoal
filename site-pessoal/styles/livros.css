@@ -1,0 +1,22 @@
+/*css para a aba de livros lidos no index.html*/
+.livro{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.mnoq{
+    color:rgb(194, 194, 194);
+}
+
+.revolucao{
+    color:rgb(132, 132, 221);
+}
+
+.dungeonMeshi{
+    color:red;
+}
+
+.hobbit{
+    color:rgb(137, 139, 109);
+}

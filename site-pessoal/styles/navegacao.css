@@ -1,0 +1,31 @@
+/*css da barra de navegação geral do site*/
+.navegacao {
+  background-color: #002077;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.navegacaoUl {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navUlLi {
+  display: inline;
+  margin: 0 15px;
+}
+
+.navUlLiA {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+.navUlLiA:hover {
+    background-color: hsl(239, 70%, 59%);
+    border-radius: 5px;
+}
+

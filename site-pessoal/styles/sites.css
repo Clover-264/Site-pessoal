@@ -1,0 +1,40 @@
+/*css para os links da aba de links e sites no index.html*/
+.pizza{
+    color:yellow;
+}
+
+.twitch{
+    color:purple;
+}
+
+.maps{
+    color:rgb(60, 127, 209)
+}
+
+.uselessWeb{
+    color:rgb(255, 128, 192)
+}
+
+.link01{
+    color:rgb(255, 0, 0);
+}
+
+.link02{
+    color:rgb(0, 255, 255);
+}
+
+.link03{
+    color:rgb(255, 251, 0);
+}
+
+.link04{
+    color:rgb(10, 151, 22);
+}
+
+.link05{
+    color:rgb(95, 20, 20);
+}
+
+.link06{
+    color:rgb(255, 115, 0);
+}
