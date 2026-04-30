@@ -1,0 +1,147 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+html { scroll-behavior: smooth; }
+
+.arco-iris {
+    animation: mudarCor 18s infinite;
+    text-align: center;
+    font-weight: bold;
+}
+a { text-decoration:none; color:red; transition: color 0.3s ease; }
+a:hover { color:white; }
+
+@keyframes mudarCor {
+    0%{color:red;}10%{color:pink;}20%{color:green;}30%{color:yellow;}40%{color:purple;}
+    50%{color:blue;}60%{color:white;}70%{color:turquoise;}80%{color:orange;}90%{color:grey;}100%{color:salmon;}
+}
+
+h2 { color: white; }
+.tamanho { font-size: 25px; }
+
+/* Topbar */
+.topbar {
+    display:flex; gap:12px; align-items:center;
+    padding:10px 14px; background:#111; border:1px solid #333; border-radius:8px;
+    margin-bottom:14px; flex-wrap:wrap;
+}
+.topbar .btn-admin, .topbar .btn-sair {
+    margin-left:auto; background:#2a7; color:white; padding:6px 12px; border-radius:4px;
+}
+.topbar .btn-sair { background:#a33; margin-left:0; }
+
+/* Sessão privada */
+.privada {
+    color:#ffd166;
+    border-left:4px solid #ffd166;
+    padding-left:12px;
+}
+
+/* Formulário */
+.form-add { display:flex; gap:8px; flex-wrap:wrap; margin:20px 0; }
+.form-add input, .form-add select, .form-add button {
+    padding:8px 12px; font-size:16px; border-radius:4px; border:1px solid #555;
+}
+.form-add input { flex:1; min-width:250px; background:#222; color:white; }
+.form-add select { background:#222; color:white; }
+.form-add button { background:#2a7; color:white; border:none; cursor:pointer; font-weight:bold; }
+.form-add button:hover { background:#3b8; }
+
+/* ============ LAYOUT PINTEREST (puro CSS, sem Masonry) ============ */
+/* Usa column-count: o navegador encaixa os itens automaticamente como Tetris */
+.grid {
+    column-count: 5;
+    column-gap: 10px;
+    width: 100%;
+}
+@media (max-width: 1400px) { .grid { column-count: 4; } }
+@media (max-width: 1100px) { .grid { column-count: 3; } }
+@media (max-width: 750px)  { .grid { column-count: 2; } }
+@media (max-width: 480px)  { .grid { column-count: 1; } }
+
+.item {
+    /* break-inside evita o item ser cortado entre colunas */
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    display: inline-block;   /* necessário p/ algumas engines respeitarem o break-inside */
+    width: 100%;
+    margin: 0 0 10px 0;
+    position: relative;
+    background:#0a0a0a;
+    border-radius:4px;
+    overflow:hidden;
+}
+
+/* Mídia ocupa 100% da coluna, altura proporcional (mantém proporção original) */
+.item img,
+.item video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+/* Embeds (YouTube, Vimeo) - aspect-ratio 9:16 estilo shorts/reels */
+.item .embed {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    height: auto;
+    border: 0;
+    border-radius: 4px;
+    background:#000;
+    display:block;
+}
+/* YouTube tradicional 16:9 */
+.item .embed-yt {
+    aspect-ratio: 16 / 9;
+}
+/* Insta/TikTok são mais altos */
+.item .embed-alto {
+    aspect-ratio: 9 / 14;
+}
+
+/* Tweet embed */
+.item .twitter-tweet { width:100% !important; max-width:100% !important; margin:0 !important; }
+
+/* Link fallback */
+.item .link-fallback {
+    display:block; padding:10px; background:#222; color:#8ecaff; word-break:break-all;
+    border-radius:4px;
+}
+
+.item button {
+    position:absolute; top:5px; right:5px; background:red; color:white; border:none;
+    cursor:pointer; z-index:10; width:28px; height:28px; border-radius:50%; font-weight:bold; font-size:14px;
+}
+.item button:hover { background:darkred; }
+
+hr { border-color:#333; margin:30px 0; }
+
+/* Telas de login/cadastro */
+.auth-box {
+    max-width:340px; margin:60px auto; background:#111; padding:24px;
+    border:1px solid #333; border-radius:10px;
+}
+.auth-box input {
+    display:block; width:100%; margin:8px 0; padding:10px; background:#222; color:white;
+    border:1px solid #444; border-radius:4px; box-sizing:border-box;
+}
+.auth-box button {
+    width:100%; padding:10px; background:#2a7; color:white; border:none; border-radius:4px;
+    font-weight:bold; cursor:pointer; margin-top:8px;
+}
+.auth-box .erro { color:#ff6b6b; }
+.auth-box .ok   { color:#6bff8e; }
+
+/* Painel admin */
+.admin-tabela { width:100%; border-collapse:collapse; margin-top:16px; }
+.admin-tabela th, .admin-tabela td { border:1px solid #333; padding:8px; text-align:left; }
+.admin-tabela th { background:#222; }
+.admin-tabela button {
+    background:#2a7; color:white; border:none; padding:4px 8px; border-radius:4px;
+    cursor:pointer; margin:2px;
+}
